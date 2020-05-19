@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 2</title>
     <link rel="stylesheet" href="bootstrap.css">
-    <script src="app.js"></script>
 </head>
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">localstore saved form</a>
+        <a class="navbar-brand" href="#form">localstore saved form</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,19 +17,19 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Form <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#form">Form <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Saved Registers</a>
+              <a class="nav-link" href="#CardContainer">Saved Registers</a>
             </li>
           </ul>
         </div>
     </nav>
     
-    <fieldset>
+    <fieldset id="form" class="fieldset">
         <div class="container">
             <div class="card-body">
-                <form >
+                <form id="personForm">
                     <div class="form-group">
                             <label for="name">Name</label>
                         <input type="text" class="form-control" id="Name" placeholder="Name">
@@ -39,23 +38,27 @@
                             <label for="Phone">Phone</label>
                         <input type="text" class="form-control" id="Phone" placeholder="Phone">
                             <label for="Email">Email</label>
-                        <input type="text" class="form-control" id="idCard" placeholder="Email">
+                        <input type="text" class="form-control" id="Email" placeholder="Email">
                             <label for="idCard">ID Card</label>
                         <input type="text" class="form-control" id="idCard" placeholder="ID Card">
                             <label for="Birthday">Birthday</label>
                         <input type="date" class="form-control" id="Birthday" placeholder="dd/mm/yyyy">
                     </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-                        </div>
+                        
                     <br>
-                    <button type="button" class="btn btn-info">Submit</button>
-                    <button type="button" class="btn btn-primary">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="Submit" class="btn btn-info">Submit</button>
+
+                    <br>
+                    <br>
+                    <h3>Saved Registers</h3>
+                    <div id="CardContainer" class="container-fluid row">
+
+                    </div>
                 </form>
                     
             </div>
         </div>
     </fieldset>
 </body>
+<script src="app.js"></script>
 </html>
